@@ -18,25 +18,22 @@ public class Interactable : MonoBehaviour
     {
         // Implement the interaction logic here
         Debug.Log("Interacting with " + tag);
-        if(tag=="interactable"){
+        if(tag=="Envanter"){
             characterControl.interactableCanvas.SetActive(true);
         }
-
-    
-        // Example: Display a message
-        ShowInteractMessage();
+        InteractionStart();
     }
 
 
-    private void ShowInteractMessage()
+    private void InteractionStart()
     {
-        // Display the interact text, for example using a UI element
-        characterControl.OpenInteractableIcon();
+        
+        characterControl.StartInteraction();
     }
 
-    private void HideInteractMessage()
+    private void StopInteraction()
     {
-        characterControl.CloseInteractableIcon();
+        characterControl.StopInteraction();
     }
 
     private void OnDrawGizmosSelected()

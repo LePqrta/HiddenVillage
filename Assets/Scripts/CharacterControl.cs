@@ -18,6 +18,7 @@ public class CharacterControl : MonoBehaviour
     private float minZoomDistance = 1f; // Minimum distance between touch points to start zooming
     private float maxZoomDistance = 20f; // Maximum distance between touch points for zooming
     public GameObject interactIcon;
+    public GameObject envanterButton;
 
     private Camera mainCamera;
     private float initialCameraSize;
@@ -73,14 +74,14 @@ public class CharacterControl : MonoBehaviour
         targetCameraSize = Mathf.Min(maxZoomDistance, targetCameraSize + zoomSpeed);
     }
 
-    public void OpenInteractableIcon()
+    public void StartInteraction()
     {
         if(tag=="interactable"){
             interactableCanvas.SetActive(true);
         }
     }
 
-    public void CloseInteractableIcon()
+    public void StopInteraction()
     {
         interactableCanvas.SetActive(false);
     }
@@ -97,16 +98,16 @@ public class CharacterControl : MonoBehaviour
             {
                 // Interact with the object
                 interactable.Interact(gameObject);
-                OpenInteractableIcon();
+                StartInteraction();
             }
             else
             {
-                CloseInteractableIcon();
+                StopInteraction();
             }
         }
         else
         {
-            CloseInteractableIcon();
+            StopInteraction();
         }
     }
 }
