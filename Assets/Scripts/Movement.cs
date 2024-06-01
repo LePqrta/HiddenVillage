@@ -1,13 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
     public float speed;
-
     public Animator animator;
 
     private Vector3 direction;
@@ -17,26 +15,24 @@ public class Movement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        direction = new Vector3(horizontal, vertical);
+        direction = new Vector3(horizontal, vertical).normalized;
 
         AnimateMovement(direction);
-
-        
     }
 
     private void FixedUpdate()
     {
-        this.transform.position += direction.normalized * speed * Time.deltaTime;
+        transform.position += direction * speed * Time.deltaTime;
     }
 
-    void AnimateMovement(Vector3 direction)
+    private void AnimateMovement(Vector3 direction)
     {
         if (animator != null)
         {
             if (direction.magnitude > 0)
             {
                 animator.SetBool("isMoving", true);
-                
+
                 animator.SetFloat("horizontal", direction.x);
                 animator.SetFloat("vertical", direction.y);
             }

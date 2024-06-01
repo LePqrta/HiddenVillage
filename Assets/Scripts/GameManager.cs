@@ -1,9 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,20 +8,27 @@ public class GameManager : MonoBehaviour
 
     public ItemManager itemManager;
     public TileManager tileManager;
+    public UI_Manager uiManager;
+
+    public Player player;
+
     private void Awake()
     {
         if (instance != null && instance != this)
         {
-            Destroy(this.GameObject());
+            Destroy(this.gameObject);
         }
         else
         {
             instance = this;
         }
-        
-        DontDestroyOnLoad(this.GameObject());
+
+        DontDestroyOnLoad(this.gameObject);
 
         itemManager = GetComponent<ItemManager>();
         tileManager = GetComponent<TileManager>();
+        uiManager = GetComponent<UI_Manager>();
+
+        player = FindObjectOfType<Player>();
     }
 }
