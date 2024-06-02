@@ -58,20 +58,21 @@ public class Inventory
             this.maxAllowed = maxAllowed;
             count++;
         }
-
-        public void RemoveItem()
+        
+    public void RemoveItem()
+    {
+        if (count > 0)
         {
-            if (count > 0)
-            {
-                count--;
+            count--;
 
-                if (count == 0)
-                {
-                    icon = null;
-                    itemName = "";
-                }
+            if (count == 0)
+            {
+                itemName = "";
+                icon = null;
+                maxAllowed = 99;
             }
         }
+    }
     }
 
     public List<Slot> slots = new List<Slot>();
