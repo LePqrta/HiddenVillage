@@ -12,7 +12,9 @@ public class MusicController : MonoBehaviour
     {
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = musicClip;
+        audioSource.loop = true;
         audioSource.Play();
+
         controlButton.onClick.AddListener(ToggleMusic);
     }
 
