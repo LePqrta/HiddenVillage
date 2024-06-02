@@ -72008,6 +72008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5dde7b15241a74fa2f27c2a76ba235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 673633744}
   slot1Button: {fileID: 1404893536}
   text: {fileID: 983073228}
   Market: {fileID: 1007231249}

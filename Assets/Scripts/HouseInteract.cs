@@ -8,7 +8,7 @@ public class HouseInteract : MonoBehaviour
     private void Awake(){
         marketCanvas.SetActive(false);
     }
-    public GameObject marketCanvas; // Reference to the interact button in the UI
+    public GameObject marketCanvas; 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,13 +34,13 @@ public class HouseInteract : MonoBehaviour
 
     private void ShowInteractButton()
     {
-        // Show the interact button in the UI
+        
         marketCanvas.SetActive(true);
     }
 
     private void HideInteractButton()
     {
-        // Hide the interact button in the UI
+        
         marketCanvas.SetActive(false);
     }
 }

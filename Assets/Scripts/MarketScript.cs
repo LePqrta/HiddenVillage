@@ -6,7 +6,7 @@ using UnityEngine.Scripting;
 
 public class MarketScript : MonoBehaviour
 {
-
+    public Player player;
     public GameObject slot1Button;
     public TextMeshProUGUI text;
     public GameObject Market;
@@ -21,6 +21,8 @@ public class MarketScript : MonoBehaviour
     }
     public void MarketDeactivate(){
         Market.SetActive(false);
+        player.text.SetActive(false);
+
     }
 
 }
