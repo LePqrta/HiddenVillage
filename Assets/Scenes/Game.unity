@@ -15322,7 +15322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicClip: {fileID: 8300000, guid: da30be6cdd2bcd341995b5e0b6f99563, type: 3}
-  controlButton: {fileID: 0}
+  controlButton: {fileID: 1409128107}
 --- !u!4 &1279139491
 Transform:
   m_ObjectHideFlags: 0
