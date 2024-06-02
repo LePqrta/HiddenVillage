@@ -65,10 +65,7 @@ public class TileManager : MonoBehaviour
     }
     private IEnumerator GrowPlant(Vector3Int position)
 {
-    // Wait for 10 seconds
     yield return new WaitForSeconds(growTime);
-
-    // Change the tile to the harvestable tile
     interactableMap.SetTile(position, harvastableTile);
     harvastableTile.name = "harvestable tile";
     Debug.Log(GetTileName(position));

@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
 {
     public InventoryManager inventoryManager;
     private TileManager tileManager;
-    private Inventory inventory;
     private int coin;
     private int price=1;
     public GameObject text;

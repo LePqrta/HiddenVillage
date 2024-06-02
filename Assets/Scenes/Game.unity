@@ -1888,12 +1888,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 673633740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -1908,6 +1908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 673633740}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &522278477
 GameObject:
   m_ObjectHideFlags: 0
@@ -7018,6 +7019,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 996352436}
+  - {fileID: 519420032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &673633741
@@ -71908,12 +71910,12 @@ PolygonCollider2D:
       - {x: -2.733425, y: -1.689758}
       - {x: -2.7109199, y: -2.7087677}
       - {x: 2.133911, y: -2.7417414}
-      - {x: 2.7514307, y: -2.6352084}
+      - {x: 2.7384162, y: -2.7393234}
       - {x: 2.7589798, y: -1.9877038}
       - {x: 2.7462094, y: -1.2694091}
       - {x: 2.7310655, y: -0.016957521}
       - {x: 2.7175243, y: 0.5457301}
-      - {x: 2.5883026, y: 2.1088371}
+      - {x: 2.6663888, y: 2.3170671}
       - {x: 0.17764282, y: 2.2965932}
   m_UseDelaunayMesh: 0
 --- !u!212 &1583733753
@@ -77274,7 +77276,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519420032}
   - {fileID: 673633740}
   - {fileID: 601464492}
   - {fileID: 1583733754}
